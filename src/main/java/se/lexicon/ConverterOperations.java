@@ -2,6 +2,7 @@ package se.lexicon;
 
 public class ConverterOperations {
 
+                    //SEK TO USD
     public static double convertsekToUsd(double sekCurrency){
         double usdCurrency = sekCurrency * ConverterRate.sekToUsd;
         return usdCurrency;

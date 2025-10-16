@@ -17,7 +17,7 @@ public class ConverterOperations {
         double euroCurrency = sekCurrency * ConverterRate.sekToEuro;
         return euroCurrency;
         }
-
+                    //EURO TO SEK
     public static double converteuroToSek(double euroCurrency){
         double sekCurrency = euroCurrency * ConverterRate.euroToSek;
         return sekCurrency;

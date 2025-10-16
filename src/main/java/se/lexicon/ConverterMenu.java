@@ -1,10 +1,18 @@
 package se.lexicon;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ConverterMenu {
-    public static void main(String[] args) {
+    public static void start() {
+
+       /* LocalDateTime currentDateTime = LocalDateTime.now();
+        LocalDateTime formatter = formatter.ofPattern("yyyy-MM-dd HH:mm");
+        currentDateTime = formatter;*/
+
 
         Scanner scanner = new Scanner(System.in);
         String input = "";
@@ -26,9 +34,11 @@ public class ConverterMenu {
             }
             catch (InputMismatchException e) {
                 System.out.println("invalid input, enter number again");
-                scanner.nextInt();
+                scanner.nextLine();
             }
         }
+
+
     }
 
     private static void operationChoices(int choice) {
@@ -40,32 +50,42 @@ public class ConverterMenu {
                     System.out.println("Enter Sek");
                     sekCurrency = scanner.nextDouble();
                     usdCurrency = ConverterOperations.convertsekToUsd(sekCurrency);
-                    System.out.println(sekCurrency + "SEK is" + usdCurrency + "USD");
+                    System.out.println("__________________");
+                    System.out.println( sekCurrency + " SEK is: \n" + usdCurrency + " USD\n" +LocalDateTime.now());
+                    System.out.println("__________________");
                     break;
 
                 case 2:
                     System.out.println("Enter Usd");
                     usdCurrency = scanner.nextDouble();
                     sekCurrency = ConverterOperations.convertusdToSek(usdCurrency);
-                    System.out.println(usdCurrency + "USD is" + sekCurrency + "SEK");
+                    System.out.println("__________________");
+                    System.out.println(usdCurrency + " USD is \n" + sekCurrency + " SEK\n" +LocalDateTime.now());
+                    System.out.println("__________________");
                     break;
 
                 case 3:
                     System.out.println("Enter Sek");
                     sekCurrency = scanner.nextDouble();
                     euroCurrency = ConverterOperations.convertsekToEuro(sekCurrency);
-                    System.out.println(sekCurrency + "SEK is" + euroCurrency + "EURO");
+                    System.out.println("__________________");
+                    System.out.println(sekCurrency + " SEK is \n" + euroCurrency + " EURO\n" +LocalDateTime.now());
+                    System.out.println("__________________");
                     break;
 
                 case 4:
                     System.out.println("Enter Euro");
                     euroCurrency = scanner.nextDouble();
                     sekCurrency = ConverterOperations.converteuroToSek(euroCurrency);
-                    System.out.println(euroCurrency + "Euro is" + sekCurrency + "SEK");
+                    System.out.println("__________________");
+                    System.out.println(euroCurrency + " Euro is \n" + sekCurrency + " SEK\n" +LocalDateTime.now());
+                    System.out.println("__________________");
                     break;
 
                 case 0:
-                    System.out.println("Exit the converter.\n Goodbye!");
+                    System.out.println("__________________");
+                    System.out.println("Exit the converter.\n \nGoodbye!");
+                    System.out.println("__________________");
                     System.exit(0);
                     break;
                 default:

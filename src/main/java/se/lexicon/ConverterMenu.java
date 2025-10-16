@@ -32,6 +32,11 @@ public class ConverterMenu {
 
 
         }
+    }
+
+    private static void operationChoices(int choice) {
+            double sekCurrency, usdCurrency, euroCurrency;
+            Scanner scanner = new Scanner(System.in);
 
 
 

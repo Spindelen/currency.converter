@@ -1,7 +1,15 @@
 package se.lexicon;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class ConverterMenu {
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
+
+        while (true){
 
             System.out.println("Currency Converter");
             System.out.println("1. Convert SEK to USD");

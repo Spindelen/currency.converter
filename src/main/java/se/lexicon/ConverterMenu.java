@@ -103,13 +103,7 @@ public class ConverterMenu {
                     System.out.println("Invalid input, please choice valid options");
                     break;
             }
-
-
-
     }
-
-
-
 }
 
 

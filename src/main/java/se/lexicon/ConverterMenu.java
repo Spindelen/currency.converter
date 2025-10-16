@@ -9,10 +9,7 @@ import java.util.Scanner;
 public class ConverterMenu {
     public static void start() {
 
-       /* LocalDateTime currentDateTime = LocalDateTime.now();
-        LocalDateTime formatter = formatter.ofPattern("yyyy-MM-dd HH:mm");
-        currentDateTime = formatter;*/
-
+      DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
         Scanner scanner = new Scanner(System.in);
         String input = "";
@@ -26,6 +23,7 @@ public class ConverterMenu {
             System.out.println("4. Convert Euro to SEK");
             System.out.println("0. Exit ");
             System.out.println(" Enter your choice:");
+            System.out.print(">");
 
             try {
                 int choice = scanner.nextInt();
@@ -43,43 +41,55 @@ public class ConverterMenu {
     }
 
     private static void operationChoices(int choice) {
-            double sekCurrency, usdCurrency, euroCurrency;
+            double sekCurrency, usdCurrency, euroCurrency = 0;
             Scanner scanner = new Scanner(System.in);
 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formattedDateTime =LocalDateTime.now().format(formatter);
+
+
+
             switch (choice) {
+
+
                 case 1:
                     System.out.println("Enter Sek");
+                    System.out.print(">");
                     sekCurrency = scanner.nextDouble();
                     usdCurrency = ConverterOperations.convertsekToUsd(sekCurrency);
                     System.out.println("__________________");
-                    System.out.println( sekCurrency + " SEK is: \n" + usdCurrency + " USD\n" +LocalDateTime.now());
+                    System.out.println(sekCurrency + " SEK is: \n" + usdCurrency + " USD\n" +formattedDateTime);
                     System.out.println("__________________");
                     break;
 
                 case 2:
                     System.out.println("Enter Usd");
+                    System.out.print(">");
                     usdCurrency = scanner.nextDouble();
                     sekCurrency = ConverterOperations.convertusdToSek(usdCurrency);
                     System.out.println("__________________");
-                    System.out.println(usdCurrency + " USD is \n" + sekCurrency + " SEK\n" +LocalDateTime.now());
+                    System.out.println(usdCurrency + " USD is \n" + sekCurrency + " SEK\n" +formattedDateTime);
                     System.out.println("__________________");
                     break;
 
                 case 3:
                     System.out.println("Enter Sek");
+                    System.out.print(">");
                     sekCurrency = scanner.nextDouble();
                     euroCurrency = ConverterOperations.convertsekToEuro(sekCurrency);
                     System.out.println("__________________");
-                    System.out.println(sekCurrency + " SEK is \n" + euroCurrency + " EURO\n" +LocalDateTime.now());
+                    System.out.println(sekCurrency + " SEK is \n" + euroCurrency + " EURO\n" +formattedDateTime);
                     System.out.println("__________________");
+
                     break;
 
                 case 4:
                     System.out.println("Enter Euro");
+                    System.out.print(">");
                     euroCurrency = scanner.nextDouble();
                     sekCurrency = ConverterOperations.converteuroToSek(euroCurrency);
                     System.out.println("__________________");
-                    System.out.println(euroCurrency + " Euro is \n" + sekCurrency + " SEK\n" +LocalDateTime.now());
+                    System.out.println(euroCurrency + " Euro is \n" + sekCurrency + " SEK\n" +formattedDateTime);
                     System.out.println("__________________");
                     break;
 

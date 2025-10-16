@@ -12,7 +12,7 @@ public class ConverterOperations {
         double sekCurrency = usdCurrency * ConverterRate.usdToSek;
         return sekCurrency;
         }
-
+                    //SEK TO EURO
     public static double convertsekToEuro(double sekCurrency){
         double euroCurrency = sekCurrency * ConverterRate.sekToEuro;
         return euroCurrency;

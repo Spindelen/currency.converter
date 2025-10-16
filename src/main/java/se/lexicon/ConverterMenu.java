@@ -38,6 +38,43 @@ public class ConverterMenu {
             double sekCurrency, usdCurrency, euroCurrency;
             Scanner scanner = new Scanner(System.in);
 
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter Sek");
+                    sekCurrency = scanner.nextDouble();
+                    usdCurrency = ConverterOperations.convertsekToUsd(sekCurrency);
+                    System.out.println(sekCurrency + "SEK is" + usdCurrency + "USD");
+                    break;
+
+                case 2:
+                    System.out.println("Enter Usd");
+                    usdCurrency = scanner.nextDouble();
+                    sekCurrency = ConverterOperations.convertusdToSek(usdCurrency);
+                    System.out.println(usdCurrency + "USD is" + sekCurrency + "SEK");
+                    break;
+
+                case 3:
+                    System.out.println("Enter Sek");
+                    sekCurrency = scanner.nextDouble();
+                    euroCurrency = ConverterOperations.convertsekToEuro(sekCurrency);
+                    System.out.println(sekCurrency + "SEK is" + euroCurrency + "EURO");
+                    break;
+
+                case 4:
+                    System.out.println("Enter Euro");
+                    euroCurrency = scanner.nextDouble();
+                    sekCurrency = ConverterOperations.converteuroToSek(euroCurrency);
+                    System.out.println(euroCurrency + "Euro is" + sekCurrency + "SEK");
+                    break;
+
+                case 0:
+                    System.out.println("Exit the converter.\n Goodbye!");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Invalid input, please choice valid options");
+                    break;
+            }
 
 
     }

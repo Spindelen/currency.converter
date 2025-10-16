@@ -34,6 +34,7 @@ public class ConverterMenu {
             }
             catch (InputMismatchException e) {
                 System.out.println("invalid input, enter number again");
+                scanner.next();
                 scanner.nextLine();
             }
         }

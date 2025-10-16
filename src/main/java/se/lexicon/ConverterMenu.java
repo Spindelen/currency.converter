@@ -21,6 +21,8 @@ public class ConverterMenu {
 
             try {
                 int choice = scanner.nextInt();
+                operationChoices(choice);
+
             }
             catch (InputMismatchException e) {
                 System.out.println("invalid input, enter number again");

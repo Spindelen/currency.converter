@@ -22,4 +22,15 @@ public class ConverterOperations {
         double sekCurrency = euroCurrency * ConverterRate.euroToSek;
         return sekCurrency;
     }
+    public static double convertUsdToEuro(double usdCurrency){
+        double sekdollar = usdCurrency * ConverterRate.usdToSek;
+        double euroDollar = sekdollar * ConverterRate.sekToEuro;
+        return euroDollar;
+    }
+
+   public static double convertEuroToUsd(double euroCurrency){
+        double sekDollar = euroCurrency * ConverterRate.euroToSek;
+        double usdDollar = sekDollar * ConverterRate.sekToUsd;
+        return usdDollar;
+    }
 }

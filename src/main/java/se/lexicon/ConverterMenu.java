@@ -16,7 +16,9 @@ public class ConverterMenu {
 
         while (true){
 
-            System.out.println("Currency Converter");
+            System.out.println(" +--------------------+ ");
+            System.out.println(" | Currency Converter |");
+            System.out.println(" +--------------------+ ");
             System.out.println("1. Convert SEK to USD");
             System.out.println("2. Convert USD to SEK");
             System.out.println("3. Convert SEK to EURO");

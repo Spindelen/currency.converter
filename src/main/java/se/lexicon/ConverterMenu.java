@@ -28,9 +28,6 @@ public class ConverterMenu {
                 System.out.println("invalid input, enter number again");
                 scanner.nextInt();
             }
-
-
-
         }
     }
 
@@ -75,6 +72,7 @@ public class ConverterMenu {
                     System.out.println("Invalid input, please choice valid options");
                     break;
             }
+
 
 
     }

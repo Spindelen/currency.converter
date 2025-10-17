@@ -50,7 +50,6 @@ public class ConverterMenu2 {
         String formattedDateTime = LocalDateTime.now().format(formatter);
 
 
-
         switch (choice) {
 
 

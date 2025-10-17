@@ -12,6 +12,7 @@ public class ConverterMenu2 {
         Scanner scanner = new Scanner(System.in);
         String input = "";
 
+
         while (true){
 
 
